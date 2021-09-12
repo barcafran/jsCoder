@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-image: url(../img/mistica\ logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center -75%;
+}
+
+header div {
+    padding: 1% 5%;
+    background-color: #31CD33;
+    display: flex;
+}
+
+header div h1 {
+    color: black;
+}
+
+.carta {
+    display: flex;
+    flex-direction: row;
+}
+
+.unidadCarta{
+    margin: 6% 3%;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.unidadCarta:hover {
+    background-color: rgb(81, 134, 81, 0.850);
+    color: aliceblue;
+    transition: 0.1s;
+}
+
+.pedidoBtn{
+    text-decoration: none;
+    padding: 4%;
+    background-color: green;
+    color: honeydew;
+    border-radius: 10px;
+    border: #0D0D0D;
+    cursor: pointer;
+    margin: 2%;
+}
+
+.pedidoBtn:hover {
+    background-color: rgba(133, 225, 253, 0.85);
+    transition: 0.2s;
+    color: black;
+    font-weight: bold;
+}
+
+.fotopizza{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+div p {
+    font-size: 140%;
+    display:flex;
+    justify-content: center;
+    margin: 1%;
+}
+
+.carrito {
+    background-color: lightpink;
+    display: flex;
+    align-items: center;
+    margin: 1% 15%;
+    border-radius: 20px;
+}
+
+.carritoTitulo {
+    margin: 1% 10%;
+    align-items: center;
+}
+
+.confirmarBtn {
+    text-decoration: none;
+    padding: 1%;
+    background-color: green;
+    color: honeydew;
+    border-radius: 10px;
+    border: #0D0D0D;
+    cursor: pointer;
+    margin: 0.5%;
+}
+
+.limpiarBtn {
+    text-decoration: none;
+    padding: 1%;
+    background-color: blue;
+    color: honeydew;
+    border-radius: 10px;
+    border: #0D0D0D;
+    cursor: pointer;
+    margin: 0.5%;
+}
+
+footer {
+    background-color: #31CD33;
+    display: flex;
+    bottom: 0;
+    width: 98%;
+    padding: 1%;
+    justify-content: center;
+    font-weight: bold;
+}
