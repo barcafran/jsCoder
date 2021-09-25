@@ -1,13 +1,9 @@
 console.log("Iniciando...");
-/* var tuNombre = prompt('Hola, ingresá tu nombre y apellido:');
+/*var tuNombre = prompt('Hola, ingresá tu nombre y apellido:');
 var holaUsuario = '¡Bienvenido/a a Mística, ' + tuNombre + '!'; 
-alert (holaUsuario);
- */
+alert (holaUsuario);*/
 
-$(document).ready(function() 
-{
-   console.log( "El DOM esta listo" );
-});
+$(document).ready(function() {
 
 
 class pizza {
@@ -58,20 +54,59 @@ const addItemHandler = (event) => {
     carritoUsuario.append(liElement);
 }
 
-lomiBtn.on("click",addItemHandler);
+lomiBtn.click(addItemHandler);
 napoJBtn.click(addItemHandler);
 palmitoBtn.click(addItemHandler);
 cuatroQBtn.click(addItemHandler);
 jamonBtn.click(addItemHandler);
 
+
 $(".limpiarBtn").click(limpia);
 function limpia () {
     carritoUsuario.empty(``);
-}
+    $('.confirmarBtn').show();
+    $('.pedir').hide();
+};
 
 $(".confirmarBtn").click(confirma);
 function confirma () {
-    carritoUsuario.append(`<li><b>Total</b> $ ${carritoUsuario.precio}</li>`);
-}
+    carritoUsuario.append(`<li><b>Total</b> $${carritoUsuario.precio}</li>`);
+};
+
+$(".confirmarBtn").click(pedir);
+function pedir () {
+    $(".carrito").fadeIn(apendeado)
+    
+    function apendeado () {
+        $(".carrito").append(`<button class="pedir">
+                            <a href="https://api.whatsapp.com/send?phone=03446664478&text=${carritoUsuario}">
+                                Confirmar
+                            </a>
+                        </button>`)
+    }
+    $('.confirmarBtn').hide();
+};
+
+//SUMAR AJAX AL BOTON DE PEDIR
+
+const URLGET   = "../index.html";
+
+const pedidoWsp =  stringify(carritoUsuario)
+
+
+$(".pedir").click(() => { 
+    $.post(URLGET, infoPost ,(respuesta, estado) => {
+        if (estado === "success"){
+            $("body").prepend(`<div>
+                Pedido enviado:${respuesta.nombre}
+                </div>`);
+        }  
+    });
+});
+
+
+
+console.log( "El DOM esta listo" );
+});
 
 console.log("Finalizado.");

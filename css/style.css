@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(../img/mistica\ logo.jpg);
+    background-image: url(../img/mistica-logo.jpg);
     background-repeat: no-repeat;
     background-position: center -75%;
 }
@@ -84,6 +84,10 @@ div p {
     align-items: center;
 }
 
+#carritoUsuario li {
+    list-style: none;
+}
+
 .confirmarBtn {
     text-decoration: none;
     padding: 1%;
@@ -104,6 +108,20 @@ div p {
     border: #0D0D0D;
     cursor: pointer;
     margin: 0.5%;
+}
+
+.pedir {
+    padding: 1%;
+    background-color: yellowgreen;
+    border-radius: 10px;
+    border: #0D0D0D;
+    cursor: pointer;
+    margin: 0.5%;
+}
+
+.pedir a {
+    text-decoration: none;
+    color: honeydew;
 }
 
 footer {
